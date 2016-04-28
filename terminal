@@ -1,6 +1,16 @@
-#!/bin/sh
+#!/bin/bash
+
+set -x
+
+font="-*-terminesspowerline-medium-*-*-*-16-*-*-*-*-*-iso10646-1"
+
+# reload Xresources settings
 xrdb -remove
-xrdb < $HOME/git/xresources/overrides
-xrdb < $HOME/git/xresources/current
-urxvt -depth 32 -cr '#995533'  -sh 16 -bg rgba:1111/1111/1111/c000 +sb -fn '-xos4-terminesspowerline-medium-r-normal--16-*-*-*-c-*-*-*' -fb '-xos4-terminesspowerline-medium-r-normal--16-*-*-*-c-*-*-*'
+cat $HOME/git/xtheme/xresources/current $HOME/git/xtheme/xresources/overrides | xrdb
+
+# start terminal emulator
+# -sh: shading
+# -fn: normal font
+# -fb: bold font
+urxvt -depth 32 -cr '#bb3333' -sh 16 -bg rgba:1111/1111/1111/c000 +sb -fg '#cccccc' -fn "$font" -fb "$font"
 
