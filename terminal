@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # use font definition from this script
-font="-*-terminesspowerline-medium-*-*-*-20-*-*-*-*-*-iso10646-1"
-urxvt -depth 32 -cr '#bb3333' -sh 16 -bg rgba:1111/1111/1111/c000 +sb -fg '#cccccc' -fn "$font" -fb "$font" "$@"
+font="-*-terminesspowerline-medium-*-*-*-12-*-*-*-*-*-iso10646-1"
+urxvt -depth 32 -cr '#bb3333' -sh 16 -bg rgba:0011/1b11/2611/c000 +sb -fg '#cccccc' -fn "$font" -fb "$font" "$@"
 
 # use font definition from Xresources
 #urxvt -depth 32 -cr '#bb3333' -sh 16 -bg rgba:1111/1111/1111/c000 +sb -fg '#cccccc'
